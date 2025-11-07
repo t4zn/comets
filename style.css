@@ -1,0 +1,258 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1b3e 50%, #2d1b4e 100%);
+    min-height: 100vh;
+}
+
+/* Header and Navigation */
+header {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid rgba(138, 43, 226, 0.3);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 1.8rem;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #4ecdc4;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(78, 205, 196, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(50px, 50px);
+    }
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 20px rgba(78, 205, 196, 0.5);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+#exploreBtn {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+}
+
+#exploreBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+/* About Section */
+.about {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 4rem 2rem;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #4ecdc4;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.comet-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.fact {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid rgba(78, 205, 196, 0.2);
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.fact:hover {
+    transform: translateY(-10px);
+    border-color: rgba(78, 205, 196, 0.6);
+}
+
+.fact h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ff6b6b;
+}
+
+/* Gallery Section */
+.gallery {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 4rem 2rem;
+}
+
+.gallery h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #4ecdc4;
+}
+
+.comet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.comet-card {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 2px solid rgba(102, 126, 234, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.comet-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+}
+
+.comet-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #ffd700;
+}
+
+.comet-card p {
+    opacity: 0.9;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    border-top: 2px solid rgba(138, 43, 226, 0.3);
+}
+
+footer p {
+    opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .about h2,
+    .gallery h2 {
+        font-size: 2rem;
+    }
+
+    .comet-facts,
+    .comet-grid {
+        grid-template-columns: 1fr;
+    }
+}
